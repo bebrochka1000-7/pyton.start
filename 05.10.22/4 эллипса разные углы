@@ -1,0 +1,23 @@
+x=0
+y=0
+w=0
+d=0
+xChange=0
+yChange=0
+def setup():
+    global x,y,w,d,xChange,yChange
+    global xChange,yChange
+    size(600,800)
+    x=0
+    y=0
+    w=60
+    d=60
+    xChange=300
+    yChange=400
+def draw():
+    global x,y,w,d,xChange,yChange
+    global xChange,yChange
+    ellipse(x,y,w,d)
+    x = x + xChange
+    y = y + yChange
+    
