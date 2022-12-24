@@ -1,0 +1,18 @@
+x=0
+y=0
+def setup():
+    global x,y
+    background(255)
+    size(600,400)
+    frameRate(2)
+def draw():
+     global x,y
+     background(255)
+     point(x,y)
+     strokeWeight(random(0,200))
+     x = random(0,600)
+     y = random(0,600)
+     for step in range(10):
+             point (random(100,500),random(100,300))
+             strokeWeight(random(0,200))
+    
