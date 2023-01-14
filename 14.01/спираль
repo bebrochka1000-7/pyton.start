@@ -1,0 +1,20 @@
+x=0
+y=0
+d=60
+w=60
+angle=0
+def setup():
+    rectMode(CENTER)
+    size(800,600)
+def draw():
+    global x,y,w,d,angle
+    translate(400,300)
+    rotate(radians(angle))
+    x = x + 0.25
+    y = y + 0.25
+    w=random(0,100)
+    d=random(0,100)
+    angle = angle + 0.5
+    ellipse(x,y,w,d)
+    fill(random(0,250),random(0,250),random(0,250))
+    
