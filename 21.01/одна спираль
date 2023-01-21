@@ -1,0 +1,17 @@
+angle=0
+gluy=0
+def setup():
+    size(800,600)
+    rectMode(CENTER)
+def draw():
+    global angle,gluy
+    background(250)
+    push()
+    translate(500,400)
+    rotate(radians(angle))
+    angle = angle + 1
+    translate(250,150)
+    rotate(radians(gluy))
+    gluy = gluy + 1
+    triangle(0,250,0,160,100,280)
+    pop()
