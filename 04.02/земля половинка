@@ -1,0 +1,33 @@
+angle=0
+ugl=0
+ugl1=0
+def setup():
+    global ugl1,angle,ugl
+    size(800,600)
+    background(37,177,227)
+    fill(11,222,23)
+    noStroke()
+    frameRate(50)
+
+def draw():
+    global angle,ugl,ugl1
+    background(37,177,227)
+    push()
+    translate(400,700)
+    rotate(radians(angle))
+    ellipse(0,0,800,800)
+    angle = angle + 1
+    translate(400,500)
+    rotate(radians(ugl1))
+    fill(218,222,16)
+    ellipse(0,0,80,80)
+    ugl1 = ugl1 + 1
+    pop()
+    push()
+    translate(400,600)
+    frameRate(500)
+    fill(3,3,3)
+    rotate(radians(ugl))
+    rect(0,250,90,100)
+    ugl = ugl + 1
+    pop()
