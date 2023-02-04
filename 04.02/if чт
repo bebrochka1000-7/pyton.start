@@ -1,0 +1,27 @@
+x=0
+y=0
+w=80
+d=80
+def setup():
+    global x,y,w,d
+    size(600,400)
+
+
+    x=0
+    y=0
+    
+def draw():
+    global x,y,w,d
+    background(250)
+    x = x + 1
+    ellipse(x,y,w,d)
+    mode = 0
+    if mode == 0:
+        x = x + 2
+    if mode == 1:
+        x = x - 2
+    if x >= 600 - 80:
+        mode = 1
+    if x <= 0 + 20:
+        mode = 0
+        
