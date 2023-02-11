@@ -1,0 +1,20 @@
+x=0
+y=0
+w=80
+d=80
+def setup():
+    global x,y,w,d
+    size(600,600)
+    x=0
+    y=0
+def draw():
+    global x,y,w,d
+    background(250)
+    ellipse(x,y,w,d)
+
+    x = x + 1
+    y = y + 1
+    
+    if (x == 600) and (y == 600):
+        x = 0
+        y = 0
