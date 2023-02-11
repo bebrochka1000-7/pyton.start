@@ -1,0 +1,23 @@
+y=0
+w=90
+d=90
+angle=0
+def setup():
+    global x,y,w,d,angle
+    size(600,500)
+    
+def draw():
+    global x,y,w,d,angle
+    background(255)
+    
+    push()
+    translate(300,250)
+    rotate(radians(angle))
+    angle = angle + 1
+    rect(x,y,w,d)
+    pop()
+    push()
+    translate(150,120)
+    rotate(radians(angle))
+    angle = angle + 1
+    pop()
