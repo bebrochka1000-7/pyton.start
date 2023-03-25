@@ -1,0 +1,27 @@
+x=0
+y=0
+d=0
+w=0
+def setup():
+    global x,y,w,d
+    size(600,600)
+    background(8,7,7)
+    x=200
+    y=200
+    d=150
+    w=300
+def draw():
+    global x,y,w,d
+    rect(x,y,w,d)
+
+    push()
+    fill(40,129,3)
+    text(u"Привет",250,300)
+    textSize(50)
+    pop()
+
+def mouseClicked():    
+    if (mouseX>x)and(mouseX<(x+w))and(mouseY>y)and(mouseY<(y+d)):
+        background(255,255,255)
+       
+    
