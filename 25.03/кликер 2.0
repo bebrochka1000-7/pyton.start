@@ -1,0 +1,54 @@
+x=0
+y=0
+d=0
+w=0
+x1=0
+y1=0
+d1=0
+w1=0
+x2=0
+y2=0
+d2=0
+w2=0
+angle=0
+def setup():
+    global x,y,w,d,x1,y1,w1,d1,angle,x2,y2,w2,d2
+    size(600,600)
+    background(8,7,7)
+    x=200
+    y=200
+    d=150
+    w=300
+    x1=400
+    y1=300
+    d1=150
+    w1=100
+    x2=250
+    y2=150
+    d2=150
+    w2=300
+    angle=1
+def draw():
+    global x,y,w,d,x1,y1,d1,w1,angle
+    rect(x,y,w,d)
+    rect(x1,y1,d1,w1)
+    rect(x2,y2,d2,w2)
+
+    push()
+    fill(40,129,3)
+    text(u"Кликать",250,300)
+    textSize(30)
+    pop()
+    push()
+    fill(40,129,3)
+    text(u"Счет:",410,380)
+    text(angle,490,380)
+    textSize(30)
+    pop()
+
+def mouseClicked():
+    global angle    
+    if (mouseX>x)and(mouseX<(x+w))and(mouseY>y)and(mouseY<(y+d)):
+       background(255,255,255)
+       angle=angle+1
+    
