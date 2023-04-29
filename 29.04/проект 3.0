@@ -1,0 +1,63 @@
+x=0
+y=0
+x1=0
+y1=0
+angle=0
+x2=0
+y2=0
+x3=0
+y3=0
+w3=-700
+d3=700
+def setup():
+    global x,y
+    size(700,600)
+    background(3,9,39)
+    strokeWeight(10)
+    stroke(255,255,255)
+def draw():
+    global x,y,angle,x2,y2
+    x=random(0,700)
+    y=random(0,600)
+    push()
+    x1=angle
+    y1=angle
+    translate(angle,angle)
+
+    angle = angle + 1
+    x2=angle
+    y2=angle
+
+    pop()
+    fill(0,78,113)
+    ellipse(angle,angle,60,90)
+
+
+    frameRate(15)
+    point(x,y)
+    ellipse(x3,y3,w3,d3)
+    fill(255,248,15)
+    ellipse(x1,y1,90,90)
+    strokeWeight(random(1,5))
+    if(mouseButton== RIGHT):
+        background(3,9,39)
+        stroke(random(0,255),random(0,255),random(0,255))
+        strokeWeight(random(2,50))
+        angle=0
+        fill(250,250,255)
+        translate(angle,angle)
+        rect(x1,y1,90,90)
+    
+
+   
+        
+        translate(mouseX,mouseY)
+    
+    elif(mouseButton==LEFT):
+        background(random(0,255),random(0,255),random(0,255))
+    if(angle >= 100):
+        fill(random(0,255),random(0,255),random(0,255))
+    if(mouseButton==CENTER):
+        ellipse(350,300,90,90)
+        background(random(0,255),random(0,255),random(0,255))
+    
